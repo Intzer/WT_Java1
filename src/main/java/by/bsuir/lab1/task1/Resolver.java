@@ -1,3 +1,5 @@
+package main.java.by.bsuir.lab1.task1;
+
 public class Resolver {
     private double x;
     private double y;

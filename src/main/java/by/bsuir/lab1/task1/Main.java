@@ -1,3 +1,4 @@
+package main.java.by.bsuir.lab1.task1;
 import java.util.Scanner;
 
 public class Main {
