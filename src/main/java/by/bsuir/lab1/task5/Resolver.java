@@ -1,38 +1,25 @@
 package main.java.by.bsuir.lab1.task5;
 
-import java.util.ArrayList;
-
 public class Resolver {
-
-    public int[] numbers;
-
-    public Resolver(int[] numbers)
-    {
-        this.numbers = numbers;
-    }
-
-    public ArrayList<Integer> getPrimeIndexes() {
-        ArrayList<Integer> prime = new ArrayList<Integer>();
-
-        for (int i = 0; i < this.numbers.length; i++)
-        {
-            if (this.numbers[i] <= 1)
-                continue;
-
-            boolean isPrime = true;
-            for (int j = 2; j < this.numbers[i]; j++)
-            {
-                if (this.numbers[i] % j == 0)
-                {
-                    isPrime = false;
-                    break;
-                }
-            }
-
-            if (isPrime)
-                prime.add(i);
+    public static int findMinToRemove(int[] A) {
+        if (A == null || A.length <= 1) {
+            return 0;
         }
 
-        return prime;
+        int n = A.length;
+        int[] dp = new int[n];
+        int maxLength = 1;
+
+        for (int i = 0; i < n; i++) {
+            dp[i] = 1;
+            for (int j = 0; j < i; j++) {
+                if (A[i] > A[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            maxLength = Math.max(maxLength, dp[i]);
+        }
+
+        return n - maxLength;
     }
 }
