@@ -13,7 +13,7 @@ public class Resolver {
         this.y2 = y2;
     }
 
-    public boolean Solve(int x, int y) {
+    public boolean solve(int x, int y) {
         return x >= this.x1 && x <= this.x2 && y >= this.y1 && y <= this.y2;
     }
 }

@@ -1,5 +1,5 @@
 package main.java.by.bsuir.lab1.task3;
-import java.util.*;
+import java.util.HashMap;
 
 public class Resolver {
     private double a;
@@ -16,8 +16,7 @@ public class Resolver {
         HashMap<Double, Double> table = new HashMap<>();
 
         double i = this.a;
-        while (i <= this.b)
-        {
+        while (i <= this.b) {
             table.put(i, Math.tan(i));
             i += this.h;
         }
@@ -25,3 +24,4 @@ public class Resolver {
         return table;
     }
 }
+
