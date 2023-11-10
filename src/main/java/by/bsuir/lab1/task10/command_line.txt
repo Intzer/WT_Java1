@@ -1,0 +1,8 @@
+# Navigate to the src directory
+cd src
+
+# Compile the Java files
+javac main/java/by/bsuir/lab1/task10/Ball.java main/java/by/bsuir/lab1/task10/Basket.java main/java/by/bsuir/lab1/task10/BasketTest.java
+
+# Run the BasketTest class
+java main.java.by.bsuir.lab1.task10.BasketTest

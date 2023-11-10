@@ -1,0 +1,13 @@
+# Create a manifest file (MANIFEST.MF) in the src directory with the following content:
+Manifest-Version: 1.0
+Main-Class: main.java.by.bsuir.lab1.task11.BasketTest
+
+# Compile the code
+cd src
+javac main/java/by/bsuir/lab1/task11/*.java
+
+# Create JAR
+jar cfm YourJarName.jar MANIFEST.MF main/java/by/bsuir/lab1/task11/*.class
+
+# Run JAR
+java -jar YourJarName.jar
